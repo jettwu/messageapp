@@ -1,0 +1,19 @@
+<div>
+<h1>Message Box</h1>
+<button ng-click="newmessage()" >New Message</button>
+<br /><br />
+<table>
+<tr>
+<th>Mark</th><th>Sender</th><th>Recipient</th><th>Title</th><th>Date</th>
+</tr>
+<tr ng-repeat="m in messagepool | filter: myfilter" ng-click="showmessagedetail(m)">
+
+<td><img src="img/important.ico" ng-show={{m.important}} /></td>
+<td>{{m.sender}}</td>
+<td>{{m.recipient}}</td>
+<td>{{m.title}}</td>
+<td>{{m.created_at}}</td>
+
+</tr>
+</table>
+</div>

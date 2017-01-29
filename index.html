@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"  ng-app='myapp'>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.5/angular-route.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+<!--     <script src="controller/loginCtrl.js"></script>
+    <script src="controller/profileCtrl.js"></script>
+    <script src="controller/registerCtrl.js"></script>
+    <script src="controller/logoutCtrl.js"></script>
+    <script src="controller/messageCtrl.js"></script> -->
+    <title>Index</title>
+</head>
+<body>
+	<header>
+		<h1 id="title">Simpe Message</h1>
+		<a id='register' ng-show="!isRegister" href="#/register">Register</a>
+		<a id='logout' ng-show="islogin" href="#/logout">Logout</a>
+		<a id='profile' ng-show="islogin && !isProfile" href="#/profile">Profile</a>
+		<a id='message' ng-show="islogin && !isMessage" href="#/message">Message</a>
+        <p ng-show="islogin">hi {{currentUser}}</p>
+	</header>
+	<div ng-view="">
+
+	</div>
+
+</body>
+</html>

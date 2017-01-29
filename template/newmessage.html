@@ -1,0 +1,26 @@
+<div >
+	<button ng-click = 'return()'>Return</button>
+	<h4>New Message</h4>
+	<form name='newmessage'>
+		<ul >
+			<li>
+				Sender: <span style='float:right'>{{sender}}</span>
+			</li>
+			<li>
+				Recipient: <!-- <input type='text' ng-model = 'recipient' /> -->
+				<select style='float:right' ng-model='recipientselected' required>
+					<option ng-repeat='recipient in allrecipients' >{{recipient}}</option>
+				</select>
+			</li>
+			<li>
+				Title: <input type='text' ng-model='title' required/>
+			</li>
+			<li>
+				<textarea rows='5' style="width:100%" ng-model = 'description' required></textarea>
+			</li>
+			<li>
+				<button ng-click='send()' ng-disabled="!(newmessage.$valid)">Send</button>
+			</li>
+		</ul>
+	</form>
+</div>

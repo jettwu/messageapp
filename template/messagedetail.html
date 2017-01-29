@@ -1,0 +1,29 @@
+<div>
+	<button ng-click = 'return()'>Return</button>
+	<ul style="width=80%">
+		<li>
+			<img src="img/important.ico" ng-show='isimportant()' />
+		</li>
+		<li>
+			Sender: {{sender}} 
+		</li>
+		<li>
+			Recipient: {{recipient}}
+		</li>
+		<li>
+			Title: {{title}}
+		</li>
+		<li>
+			<textarea rows='5' style="width:100%" readonly>{{description}}</textarea>
+		</li>
+		<li>
+			Date: {{created_at}}
+		</li>
+		<li>
+			<button ng-click="mark()">Mark/Unmark</button>
+			<button ng-click="reply(sender)">Reply</button>
+			<button ng-click="delete()">Delete</button>
+		</li>
+
+	</ul>
+</div>

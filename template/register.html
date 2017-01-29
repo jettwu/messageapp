@@ -1,0 +1,30 @@
+<div>
+	<form name='register_form'>
+		<ul>
+			<li>
+				User Name: <input type='text' ng-model='p_username' placeholder='username' required/>
+			</li>
+			<li>
+				Password: <input type='password' ng-model='p_pwd' placeholder='password' required/>
+			</li>
+			<li>
+				First Name: <input type='text' ng-model='p_firstname' placeholder='first name' required/>
+			</li>
+			<li>
+				Last Name: <input type='text' ng-model='p_lastname' placeholder='last name' required/>
+			</li>
+			<li>
+				Email: <input type='email' ng-model='p_email' placeholder='email' required/>
+			</li>
+			<li>
+				Phone: <input type='number' ng-model='p_phone' placeholder='phone' required/>
+			</li>
+			<li>
+				Location: <input type='text' ng-model='p_location' placeholder='location' required/>
+			</li>
+			<li>
+				<button ng-disabled="!(register_form.$valid)" ng-click="register()" >Register</button>
+			</li>
+		</ul>
+	</form>
+</div>

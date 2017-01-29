@@ -1,0 +1,24 @@
+<div >
+	<button ng-click = 'return()'>Return</button>
+	<h4>New Message</h4>
+	<form name='replymessage'>
+		<ul >
+			<li>
+				Sender: <span style='float:right'>{{sender}}</span>
+			</li>
+			<li>
+				Recipient: <span style='float:right'>{{recipient}}</span>
+			</li>
+			<li>
+				Title: <input type='text' ng-model='title' required/>
+			</li>
+			<li>
+				<textarea rows='5' style="width:100%" ng-model = 'description' required></textarea>
+			</li>
+			<li>
+				<button ng-click='send()' ng-disabled="!(replymessage.$valid)">Send</button>
+			</li>
+
+		</ul>
+	</form>
+</div>
